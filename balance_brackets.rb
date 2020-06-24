@@ -54,7 +54,6 @@ end
 puts balanced_brackets?('(hello')
 # => true
 
-
 puts balanced_brackets?('(hello)[world]')
 # => true
 

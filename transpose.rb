@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Transposition
 # A Transposition Error is when two letters are swapped, such as in "hte" instead of "the", or "rign" instead of "ring".
 # Given a string of characters, can you fix every place where "gn"  appears so it becomes "ng" instead? If there are multiple "g"s in a row,  the "n" should be swapped with the first "g". No "gn" should appear in  the final text, so be careful with all possibilities!
@@ -18,7 +20,6 @@
 
 # puts transpose('gngngnnggnngggnnn')
 # # => nnnnnnnnngggggggg
-
 
 def transpose(string)
   i = 0
