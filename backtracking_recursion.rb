@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Backtracking Recursion
 
 # You will be given a list of numbers where the first number is the desired sum and the remaining numbers are the coins. Determine if the coins can be added together to reach the exact sum. You cannot use the same coin twice, but you can use duplicate coins (if there are any).
@@ -7,7 +9,7 @@
 
 # Converting it to code
 
-# The algorithm described above could not be encoded with a simple loop. This is because it "splits in two" each time to try out every  possibility, while a loop just goes through things in order. 
+# The algorithm described above could not be encoded with a simple loop. This is because it "splits in two" each time to try out every  possibility, while a loop just goes through things in order.
 
 # The function should go through the array one number at a time, and  recursively call itself twice: Once, with the coin subtracted from the desired sum, and once without the coin. The beginning of the function should check if the end of the array has been reached, and check if the sum is down to 0 or not.
 
@@ -22,11 +24,11 @@
 # # => false
 
 def exact_sum?(k, coins)
-  #write your code here
+  # write your code here
   return true if k == 0
   return false if coins.empty? || k < 0
-  
-  exact_sum?(k-coins[0], coins[1..-1]) || exact_sum?(k, coins[1..-1])
+
+  exact_sum?(k - coins[0], coins[1..-1]) || exact_sum?(k, coins[1..-1])
 end
 
 puts exact_sum?(12, [1, 2, 3, 4, 5])

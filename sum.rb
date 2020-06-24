@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Challenge
 
 # You will be given a positive integer number . Fill in the method sum so that it adds up all the positive integers up to number and returns the sum.
@@ -16,12 +18,11 @@
 # Get stuck and need some hint?
 # Check this link: https://gitlab.com/microverse/guides/coding_challenges/hints/blob/master/challenges/recursion/basic-recursion.md
 
-
 def sum(number)
   if number == 1
-    1 
+    1
   else
-    number + sum(number-1)
+    number + sum(number - 1)
   end
 end
 
